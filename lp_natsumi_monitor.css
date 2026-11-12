@@ -872,7 +872,8 @@
 }
 
 .lpm-artist__scene {
-  margin: 0 0 22px;
+  width: 66%;
+  margin: 0 auto 22px;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 6px 18px rgba(74, 59, 51, 0.14);
