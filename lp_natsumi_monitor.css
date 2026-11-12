@@ -1,0 +1,1120 @@
+/* ===============================================
+   眉アートメイク モニター募集LP（担当 Natsumi） 2026-11-12
+   LP専用CSS。テーマCSS（base / components / themes/artmake / pages/detail）の後に読み込む。
+   クラス接頭辞: lpm-
+   =============================================== */
+
+.lpm {
+  --lpm-rose: #B98A7C;
+  --lpm-rose-deep: #9A6B5E;
+  --lpm-rose-pale: #F1E2DB;
+  --lpm-paper: #F6EFE8;
+  --lpm-cream: #FBF7F3;
+  --lpm-ink: #4A3B33;
+  --lpm-ink-soft: #7A675C;
+  --lpm-line: #E6D9CE;
+  --lpm-green: #06C755;
+  --lpm-font-serif: "Shippori Mincho", "Hiragino Mincho ProN", "Yu Mincho", "游明朝", serif;
+  --lpm-font-en: "Cormorant Garamond", "Times New Roman", serif;
+  padding-top: 60px; /* 固定ヘッダー分 */
+  color: var(--lpm-ink);
+  overflow-x: hidden;
+}
+
+.lpm img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* LPでは離脱導線を減らす（グローバルメニュー・テーマ標準の固定CTAを非表示） */
+.lp-natsumi-monitor .header__menu-toggle,
+.lp-natsumi-monitor .back-to-top {
+  display: none;
+}
+
+/* ---------- 共通：セクション ---------- */
+.lpm-section {
+  padding: 56px 0;
+  background-color: #FFFFFF;
+}
+
+.lpm-section--paper {
+  background-color: var(--lpm-paper);
+}
+
+.lpm-section--cream {
+  background-color: var(--lpm-cream);
+}
+
+.lpm-heading {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.lpm-heading__en {
+  display: block;
+  font-family: var(--lpm-font-en);
+  font-style: italic;
+  font-size: 17px;
+  letter-spacing: 0.08em;
+  color: var(--lpm-rose);
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+
+.lpm-heading__ja {
+  display: block;
+  font-family: var(--lpm-font-serif);
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 1.45;
+  letter-spacing: 0.06em;
+  color: var(--lpm-ink);
+}
+
+.lpm-heading::after {
+  content: "";
+  display: block;
+  width: 36px;
+  height: 1px;
+  margin: 18px auto 0;
+  background-color: var(--lpm-rose);
+}
+
+.lpm-lead {
+  font-size: 15px;
+  line-height: 1.9;
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.lpm-note {
+  font-size: 12px;
+  line-height: 1.7;
+  color: var(--lpm-ink-soft);
+}
+
+/* ---------- 共通：LINE CTA ---------- */
+.lpm-cta {
+  text-align: center;
+  margin-top: 32px;
+}
+
+.lpm-cta__lead {
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: var(--lpm-rose-deep);
+  margin-bottom: 8px;
+}
+
+.lpm-cta__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  min-height: 62px;
+  padding: 12px 20px;
+  border-radius: 9999px;
+  background: linear-gradient(135deg, #06C755 0%, #00B900 100%);
+  color: #FFFFFF;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  box-shadow: 0 6px 18px rgba(0, 185, 0, 0.28);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.lpm-cta__button:hover {
+  opacity: 1;
+  color: #FFFFFF;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(0, 185, 0, 0.36);
+}
+
+.lpm-cta__button i {
+  font-size: 28px;
+  flex-shrink: 0;
+}
+
+.lpm-cta__note {
+  margin-top: 12px;
+  font-size: 12px;
+  line-height: 1.7;
+  color: var(--lpm-ink-soft);
+}
+
+.lpm-cta__note strong {
+  font-weight: 700;
+  color: var(--lpm-ink);
+}
+
+/* ---------- ファーストビュー ---------- */
+.lpm-hero {
+  position: relative;
+  padding: 22px 0 40px;
+  background: linear-gradient(180deg, #F3E7DE 0%, var(--lpm-paper) 55%, #FFFFFF 100%);
+  overflow: hidden;
+}
+
+.lpm-hero__deco {
+  position: absolute;
+  top: 66px;
+  right: -28px;
+  margin: 0;
+  font-family: var(--lpm-font-en);
+  font-style: italic;
+  font-size: 68px;
+  line-height: 1;
+  white-space: nowrap;
+  color: var(--lpm-rose);
+  opacity: 0.13;
+  transform: rotate(-8deg);
+  pointer-events: none;
+}
+
+.lpm-hero__inner {
+  position: relative;
+}
+
+.lpm-hero__limit {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.lpm-hero__limit span {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 9999px;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.06em;
+}
+
+.lpm-hero__limit-artist {
+  background-color: var(--lpm-rose-deep);
+  color: #FFFFFF;
+}
+
+.lpm-hero__limit-count {
+  background-color: #FFFFFF;
+  color: var(--lpm-rose-deep);
+  border: 1px solid var(--lpm-rose);
+}
+
+.lpm-hero__title {
+  font-family: var(--lpm-font-serif);
+  font-weight: 500;
+  font-size: 42px;
+  line-height: 1.26;
+  letter-spacing: 0.02em;
+  font-feature-settings: "palt";
+  color: var(--lpm-ink);
+  margin-bottom: 12px;
+}
+
+.lpm-hero__title span {
+  display: block;
+}
+
+.lpm-hero__lead {
+  font-size: 14px;
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+
+.lpm-hero__body {
+  display: grid;
+  grid-template-columns: 1fr 150px;
+  gap: 14px;
+  align-items: end;
+}
+
+.lpm-hero__conditions-title {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #FFFFFF;
+  background-color: var(--lpm-rose);
+  padding: 4px 12px;
+  margin-bottom: 12px;
+}
+
+.lpm-checks {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.lpm-checks li {
+  position: relative;
+  padding-left: 30px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.lpm-checks li + li {
+  margin-top: 10px;
+}
+
+.lpm-checks li::before {
+  content: "\f00c";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  font-size: 11px;
+  position: absolute;
+  left: 0;
+  top: 1px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: var(--lpm-rose);
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lpm-hero__conditions .lpm-checks li {
+  font-size: 13px;
+}
+
+.lpm-hero__conditions {
+  padding-bottom: 16px;
+}
+
+.lpm-checks small {
+  display: block;
+  font-size: 11px;
+  color: var(--lpm-ink-soft);
+}
+
+.lpm-hero__photo {
+  margin: 0;
+  position: relative;
+}
+
+.lpm-hero__photo img {
+  width: 150px;
+  height: 190px;
+  object-fit: cover;
+  object-position: 62% 30%;
+  border-radius: 75px 75px 0 0;
+  box-shadow: 0 8px 24px rgba(74, 59, 51, 0.16);
+}
+
+.lpm-hero__photo figcaption {
+  position: absolute;
+  left: 50%;
+  bottom: 10px;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  background-color: rgba(255, 255, 255, 0.92);
+  border-radius: 9999px;
+  padding: 4px 12px;
+  font-size: 10px;
+  line-height: 1.3;
+  color: var(--lpm-ink-soft);
+}
+
+.lpm-hero__photo figcaption strong {
+  margin-left: 4px;
+  font-family: var(--lpm-font-en);
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--lpm-ink);
+}
+
+/* ---------- 価格カード ---------- */
+.lpm-price {
+  position: relative;
+  padding: 22px 20px 18px;
+  border-radius: 0 0 16px 16px;
+  background: linear-gradient(135deg, #A5786A 0%, #C39C8E 100%);
+  color: #FFFFFF;
+  box-shadow: 0 10px 26px rgba(154, 107, 94, 0.28);
+}
+
+.lpm-price--round {
+  border-radius: 16px;
+}
+
+.lpm-price__badge {
+  position: absolute;
+  top: -28px;
+  right: 12px;
+  width: 78px;
+  height: 78px;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+  color: var(--lpm-rose-deep);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.2;
+  box-shadow: 0 4px 12px rgba(74, 59, 51, 0.18);
+}
+
+.lpm-price__badge strong {
+  font-family: var(--lpm-font-serif);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+.lpm-price__badge small {
+  font-size: 11px;
+}
+
+.lpm-price__menu {
+  font-family: var(--lpm-font-serif);
+  font-size: 17px;
+  letter-spacing: 0.04em;
+  line-height: 1.4;
+  white-space: nowrap;
+}
+
+.lpm-price--badge {
+  margin-top: 28px;
+}
+
+.lpm-price--badge .lpm-price__menu {
+  font-size: 16px;
+  padding-right: 74px;
+}
+
+.lpm-price__menu span {
+  margin-left: 8px;
+  font-size: 13px;
+}
+
+.lpm-price__label {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 4px 10px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  line-height: 1.3;
+}
+
+.lpm-price__main {
+  display: flex;
+  align-items: baseline;
+  margin-top: 6px;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.lpm-price__num {
+  font-family: var(--lpm-font-serif);
+  font-size: 54px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.lpm-price__yen {
+  margin-left: 2px;
+  font-family: var(--lpm-font-serif);
+  font-size: 22px;
+}
+
+.lpm-price__tax {
+  font-size: 12px;
+}
+
+.lpm-price__option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px dashed rgba(255, 255, 255, 0.55);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.lpm-price__option strong {
+  font-family: var(--lpm-font-serif);
+  font-size: 18px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.lpm-price__option small {
+  display: block;
+  font-size: 11px;
+  padding-left: 1.3em;
+}
+
+.lpm-price__ref {
+  margin-top: 10px;
+  font-size: 11px;
+  line-height: 1.6;
+  opacity: 0.92;
+}
+
+/* ---------- お悩み ---------- */
+.lpm-worries {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.lpm-worries li {
+  position: relative;
+  padding: 14px 16px 14px 46px;
+  background-color: #FFFFFF;
+  border-radius: 8px;
+  font-size: 15px;
+  line-height: 1.6;
+  box-shadow: 0 2px 8px rgba(74, 59, 51, 0.05);
+}
+
+.lpm-worries li::before {
+  content: "\f00c";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  font-size: 13px;
+  position: absolute;
+  left: 18px;
+  top: 16px;
+  color: var(--lpm-rose);
+}
+
+.lpm-message {
+  margin-top: 36px;
+  text-align: center;
+}
+
+.lpm-message__arrow {
+  width: 0;
+  height: 0;
+  margin: 0 auto 22px;
+  border-left: 16px solid transparent;
+  border-right: 16px solid transparent;
+  border-top: 14px solid var(--lpm-rose);
+}
+
+.lpm-message__copy {
+  font-family: var(--lpm-font-serif);
+  font-size: 23px;
+  font-weight: 500;
+  line-height: 1.7;
+  letter-spacing: 0.06em;
+}
+
+.lpm-message__copy em {
+  font-style: normal;
+  background: linear-gradient(180deg, transparent 62%, rgba(185, 138, 124, 0.32) 62%);
+}
+
+.lpm-message__text {
+  margin-top: 16px;
+  font-size: 14px;
+  line-height: 1.9;
+  text-align: left;
+}
+
+/* ---------- 募集要項 ---------- */
+.lpm-offer__table {
+  margin: 24px 0 0;
+  border-top: 1px solid var(--lpm-line);
+}
+
+.lpm-offer__row {
+  display: grid;
+  grid-template-columns: 96px 1fr;
+  gap: 12px;
+  padding: 14px 4px;
+  border-bottom: 1px solid var(--lpm-line);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.lpm-offer__row dt {
+  font-weight: 700;
+  color: var(--lpm-rose-deep);
+}
+
+.lpm-offer__row dd {
+  margin: 0;
+}
+
+.lpm-offer__row dd small {
+  display: block;
+  font-size: 12px;
+  color: var(--lpm-ink-soft);
+}
+
+.lpm-conditions {
+  margin-top: 32px;
+  padding: 24px 20px;
+  background-color: var(--lpm-cream);
+  border: 1px solid var(--lpm-line);
+  border-radius: 12px;
+}
+
+.lpm-conditions__title {
+  font-family: var(--lpm-font-serif);
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-align: center;
+  margin-bottom: 18px;
+  color: var(--lpm-ink);
+}
+
+.lpm-conditions .lpm-checks li {
+  font-size: 15px;
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+
+.lpm-conditions .lpm-note {
+  margin-top: 16px;
+}
+
+/* ---------- 症例カルーセル ---------- */
+.lpm-carousel {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  padding: 0 20px 4px;
+  scroll-padding-left: 20px;
+}
+
+.lpm-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.lpm-carousel__item {
+  flex: 0 0 82%;
+  margin: 0;
+  scroll-snap-align: start;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(74, 59, 51, 0.1);
+  background-color: #FFFFFF;
+}
+
+.lpm-carousel__item img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+.lpm-carousel__dots {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 14px;
+}
+
+.lpm-carousel__dots span {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #DCCFC5;
+  transition: background-color 0.25s;
+}
+
+.lpm-carousel__dots span.is-active {
+  background-color: var(--lpm-rose-deep);
+}
+
+.lpm-carousel__hint {
+  margin-top: 6px;
+  text-align: center;
+  font-family: var(--lpm-font-en);
+  font-size: 13px;
+  letter-spacing: 0.14em;
+  color: var(--lpm-rose);
+}
+
+.lpm-disclosure {
+  margin-top: 20px;
+  padding: 14px 16px;
+  background-color: #FFFFFF;
+  border: 1px solid var(--lpm-line);
+  border-radius: 8px;
+  font-size: 11px;
+  line-height: 1.8;
+  color: var(--lpm-ink-soft);
+}
+
+.lpm-disclosure dt {
+  float: left;
+  clear: left;
+  margin-right: 6px;
+  font-weight: 700;
+  color: var(--lpm-ink);
+}
+
+.lpm-disclosure dd {
+  margin: 0;
+}
+
+/* ---------- 担当アーティスト ---------- */
+.lpm-artist {
+  text-align: center;
+}
+
+.lpm-artist__photo {
+  width: 168px;
+  height: 168px;
+  margin: 0 auto 18px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(74, 59, 51, 0.14);
+  border: 4px solid #FFFFFF;
+}
+
+.lpm-artist__photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 60% 30%;
+}
+
+.lpm-artist__name {
+  font-family: var(--lpm-font-en);
+  font-size: 32px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  line-height: 1.2;
+  color: var(--lpm-ink);
+}
+
+.lpm-artist__role {
+  margin-top: 4px;
+  font-size: 13px;
+  color: var(--lpm-rose-deep);
+  letter-spacing: 0.08em;
+}
+
+.lpm-artist__qualification {
+  margin-top: 12px;
+  font-size: 13px;
+  line-height: 1.8;
+  color: var(--lpm-ink-soft);
+}
+
+.lpm-artist__comment {
+  position: relative;
+  margin: 24px 0 0;
+  padding: 26px 12px 22px;
+  background-color: #FFFFFF;
+  border-radius: 12px;
+  font-family: var(--lpm-font-serif);
+  font-size: 15px;
+  line-height: 2;
+  letter-spacing: 0;
+  box-shadow: 0 2px 10px rgba(74, 59, 51, 0.06);
+}
+
+.lpm-artist__comment::before {
+  content: "\201C";
+  position: absolute;
+  top: -6px;
+  left: 16px;
+  font-family: var(--lpm-font-en);
+  font-size: 56px;
+  line-height: 1;
+  color: var(--lpm-rose);
+  opacity: 0.6;
+}
+
+.lpm-artist__text {
+  margin-top: 20px;
+  font-size: 14px;
+  line-height: 1.9;
+  text-align: left;
+}
+
+.lpm-artist__instagram {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 18px;
+  font-size: 13px;
+  color: var(--lpm-rose-deep);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.lpm-artist__instagram i {
+  font-size: 20px;
+}
+
+/* ---------- デザイン（技法） ---------- */
+.lpm-types {
+  display: grid;
+  gap: 14px;
+}
+
+.lpm-type {
+  display: grid;
+  grid-template-columns: 112px 1fr;
+  gap: 14px;
+  align-items: center;
+  padding: 16px;
+  background-color: #FFFFFF;
+  border: 1px solid var(--lpm-line);
+  border-radius: 12px;
+}
+
+.lpm-type__image {
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #FFFFFF;
+}
+
+.lpm-type__name {
+  font-family: var(--lpm-font-serif);
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  line-height: 1.4;
+  color: var(--lpm-ink);
+}
+
+.lpm-type__tag {
+  display: inline-block;
+  margin-left: 6px;
+  padding: 2px 8px;
+  border-radius: 9999px;
+  background-color: var(--lpm-rose-pale);
+  color: var(--lpm-rose-deep);
+  font-family: var(--font-family-base);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0;
+  vertical-align: middle;
+}
+
+.lpm-type__text {
+  margin-top: 6px;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.lpm-types__note {
+  margin-top: 16px;
+  text-align: center;
+}
+
+/* ---------- 安心基準 ---------- */
+.lpm-trust {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.lpm-trust li {
+  padding: 18px 12px 16px;
+  background-color: #FFFFFF;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(74, 59, 51, 0.05);
+}
+
+.lpm-trust i {
+  font-size: 24px;
+  color: var(--lpm-rose);
+  margin-bottom: 10px;
+}
+
+.lpm-trust strong {
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.5;
+  color: var(--lpm-ink);
+}
+
+.lpm-trust span {
+  display: block;
+  margin-top: 4px;
+  font-size: 11px;
+  line-height: 1.6;
+  color: var(--lpm-ink-soft);
+}
+
+/* ---------- 応募の流れ ---------- */
+.lpm-steps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  counter-reset: lpm-step;
+}
+
+.lpm-steps li {
+  position: relative;
+  padding: 0 0 28px 62px;
+  counter-increment: lpm-step;
+}
+
+.lpm-steps li:last-child {
+  padding-bottom: 0;
+}
+
+.lpm-steps li::before {
+  content: "0" counter(lpm-step);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--lpm-rose);
+  color: #FFFFFF;
+  font-family: var(--lpm-font-en);
+  font-size: 20px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lpm-steps li::after {
+  content: "";
+  position: absolute;
+  left: 22px;
+  top: 50px;
+  bottom: 6px;
+  width: 1px;
+  background-color: var(--lpm-rose);
+  opacity: 0.45;
+}
+
+.lpm-steps li:last-child::after {
+  display: none;
+}
+
+.lpm-steps__title {
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.5;
+  padding-top: 8px;
+  color: var(--lpm-ink);
+}
+
+.lpm-steps__text {
+  margin-top: 6px;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.lpm-steps__message {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 14px;
+  border-radius: 4px 16px 16px 16px;
+  background-color: #E9F9EE;
+  border: 1px solid #BFEBCB;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.5;
+  color: #1E7A3C;
+}
+
+/* ---------- FAQ（テーマ .faq-item を利用） ---------- */
+.lpm-faq .faq-item__question {
+  font-size: 15px;
+  gap: 12px;
+  padding: 18px 16px;
+}
+
+.lpm-faq .faq-item__answer-inner {
+  gap: 12px;
+  padding: 4px 16px 18px;
+  font-size: 14px;
+}
+
+/* ---------- リスク・注意事項 ---------- */
+.lpm-risk__block {
+  padding: 18px 16px;
+  background-color: var(--lpm-cream);
+  border: 1px solid var(--lpm-line);
+  border-radius: 8px;
+}
+
+.lpm-risk__block + .lpm-risk__block {
+  margin-top: 12px;
+}
+
+.lpm-risk__title {
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.5;
+  margin-bottom: 8px;
+  color: var(--lpm-ink);
+}
+
+.lpm-risk__block p,
+.lpm-risk__block li {
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.lpm-risk__block ul {
+  margin: 0;
+  padding-left: 1.2em;
+  list-style: disc;
+}
+
+.lpm-risk__link {
+  margin-top: 16px;
+  text-align: center;
+  font-size: 13px;
+}
+
+.lpm-risk__link a {
+  color: var(--lpm-rose-deep);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* ---------- 最終CTA・クリニック情報 ---------- */
+.lpm-closing {
+  background: linear-gradient(180deg, var(--lpm-paper) 0%, #F1E2DB 100%);
+}
+
+.lpm-closing__copy {
+  font-family: var(--lpm-font-serif);
+  font-size: 21px;
+  font-weight: 500;
+  line-height: 1.7;
+  letter-spacing: 0.04em;
+  text-align: center;
+}
+
+.lpm-closing__text {
+  margin: 14px 0 24px;
+  font-size: 14px;
+  line-height: 1.9;
+  text-align: center;
+}
+
+.lpm-clinic {
+  margin-top: 40px;
+  padding: 22px 20px;
+  background-color: #FFFFFF;
+  border-radius: 12px;
+}
+
+.lpm-clinic__name {
+  font-family: var(--lpm-font-en);
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-align: center;
+  margin-bottom: 14px;
+  color: var(--lpm-ink);
+}
+
+.lpm-clinic__list {
+  margin: 0;
+  border-top: 1px solid var(--lpm-line);
+}
+
+.lpm-clinic__row {
+  display: grid;
+  grid-template-columns: 72px 1fr;
+  gap: 10px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--lpm-line);
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.lpm-clinic__row dt {
+  font-weight: 700;
+  color: var(--lpm-rose-deep);
+}
+
+.lpm-clinic__row dd {
+  margin: 0;
+}
+
+.lpm-clinic__link {
+  margin-top: 14px;
+  text-align: center;
+  font-size: 13px;
+}
+
+.lpm-clinic__link a {
+  color: var(--lpm-rose-deep);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* ---------- フッター（LP用に簡略化） ---------- */
+.lpm-footer-links {
+  list-style: none;
+  margin: 0 0 24px;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 20px;
+  font-size: 13px;
+}
+
+.lpm-footer-links a {
+  color: #FFFFFF;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.lp-natsumi-monitor .footer__contact {
+  text-align: center;
+}
+
+/* ---------- 追従CTA（テーマ .mobile-fixed-cta を拡張） ---------- */
+.lpm-fixed-cta {
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 -2px 12px rgba(74, 59, 51, 0.1);
+}
+
+.lpm-fixed-cta__note {
+  margin: 0 0 4px;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: 0.06em;
+  color: #9A6B5E;
+  text-align: center;
+}
+
+.lpm-fixed-cta .mobile-cta-button {
+  width: 100%;
+  max-width: 390px;
+  font-size: 16px;
+  padding: 13px 20px;
+}
+
+body.lp-natsumi-monitor.has-mobile-cta {
+  padding-bottom: calc(84px + env(safe-area-inset-bottom, 0px));
+}
