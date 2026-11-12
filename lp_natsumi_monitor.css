@@ -773,6 +773,16 @@
   margin-top: 16px;
 }
 
+/* 募集要項（クリーム背景）内のボックスは白地にする */
+.lpm-section--cream .lpm-twice,
+.lpm-section--cream .lpm-conditions {
+  background-color: #FFFFFF;
+}
+
+.lpm-section--cream .lpm-twice__col {
+  background-color: var(--lpm-cream);
+}
+
 /* ---------- 症例カルーセル ---------- */
 .lpm-carousel {
   display: flex;
