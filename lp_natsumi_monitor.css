@@ -156,24 +156,8 @@
 .lpm-hero {
   position: relative;
   padding: 22px 0 40px;
-  background: linear-gradient(180deg, #F3E7DE 0%, var(--lpm-paper) 55%, #FFFFFF 100%);
+  background-color: #FFFFFF;
   overflow: hidden;
-}
-
-.lpm-hero__deco {
-  position: absolute;
-  top: 66px;
-  right: -28px;
-  margin: 0;
-  font-family: var(--lpm-font-en);
-  font-style: italic;
-  font-size: 68px;
-  line-height: 1;
-  white-space: nowrap;
-  color: var(--lpm-rose);
-  opacity: 0.13;
-  transform: rotate(-8deg);
-  pointer-events: none;
 }
 
 .lpm-hero__inner {
