@@ -374,7 +374,7 @@
 }
 
 .lpm-price__badge small {
-  font-size: 11px;
+  font-size: 10px;
 }
 
 .lpm-price__menu {
@@ -399,9 +399,93 @@
   font-size: 13px;
 }
 
+.lpm-price__regular {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+  font-size: 12px;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.lpm-price__regular s {
+  font-family: var(--lpm-font-serif);
+  font-size: 19px;
+  text-decoration-thickness: 1px;
+}
+
+.lpm-price__arrow {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin: 0 2px;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 8px solid currentColor;
+  vertical-align: middle;
+}
+
+.lpm-price__off {
+  padding: 5px 10px;
+  border-radius: 9999px;
+  background-color: #FFFFFF;
+  color: var(--lpm-rose-deep);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.lpm-price__twice {
+  margin-top: 14px;
+  padding: 10px 14px 12px;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.18);
+}
+
+.lpm-price__twice-lead {
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  line-height: 1.5;
+}
+
+.lpm-price__twice-sum {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0 4px;
+  margin-top: 2px;
+  font-size: 13px;
+  line-height: 1.4;
+  white-space: nowrap;
+}
+
+.lpm-price__twice-sum s {
+  font-family: var(--lpm-font-serif);
+  font-size: 15px;
+  text-decoration-thickness: 1px;
+}
+
+.lpm-price__twice-sum .lpm-price__arrow {
+  align-self: center;
+}
+
+.lpm-price__twice-sum strong {
+  font-family: var(--lpm-font-serif);
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.lpm-price__twice-sum small {
+  font-size: 11px;
+}
+
 .lpm-price__label {
   display: inline-block;
-  margin-top: 12px;
+  margin-top: 10px;
   padding: 4px 10px;
   border: 1px solid rgba(255, 255, 255, 0.8);
   font-size: 11px;
@@ -457,13 +541,6 @@
   display: block;
   font-size: 11px;
   padding-left: 1.3em;
-}
-
-.lpm-price__ref {
-  margin-top: 10px;
-  font-size: 11px;
-  line-height: 1.6;
-  opacity: 0.92;
 }
 
 /* ---------- お悩み ---------- */
@@ -559,6 +636,129 @@
   display: block;
   font-size: 12px;
   color: var(--lpm-ink-soft);
+}
+
+/* ---------- 2回換算の訴求 ---------- */
+.lpm-twice {
+  margin-top: 28px;
+  padding: 26px 18px 22px;
+  background-color: var(--lpm-cream);
+  border: 1px solid var(--lpm-line);
+  border-radius: 12px;
+}
+
+.lpm-twice__title {
+  font-family: var(--lpm-font-serif);
+  font-size: 21px;
+  font-weight: 500;
+  line-height: 1.6;
+  letter-spacing: 0.04em;
+  text-align: center;
+  color: var(--lpm-ink);
+}
+
+.lpm-twice__title em {
+  font-style: normal;
+  background: linear-gradient(180deg, transparent 62%, rgba(185, 138, 124, 0.32) 62%);
+}
+
+.lpm-twice__text {
+  margin-top: 14px;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.lpm-twice__text strong {
+  font-weight: 700;
+}
+
+.lpm-twice__compare {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.lpm-twice__col {
+  padding: 14px 8px 12px;
+  border-radius: 10px;
+  background-color: #FFFFFF;
+  border: 1px solid var(--lpm-line);
+  text-align: center;
+}
+
+.lpm-twice__col--monitor {
+  border: 2px solid var(--lpm-rose);
+}
+
+.lpm-twice__label {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: var(--lpm-ink-soft);
+}
+
+.lpm-twice__col--monitor .lpm-twice__label {
+  color: var(--lpm-rose-deep);
+}
+
+.lpm-twice__calc {
+  margin-top: 6px;
+  font-size: 12px;
+  line-height: 1.4;
+  color: var(--lpm-ink-soft);
+}
+
+.lpm-twice__total {
+  margin-top: 4px;
+  font-family: var(--lpm-font-serif);
+  font-size: 15px;
+  line-height: 1.3;
+  white-space: nowrap;
+  color: var(--lpm-ink);
+}
+
+.lpm-twice__total s {
+  font-size: 22px;
+  color: var(--lpm-ink-soft);
+  text-decoration-thickness: 1px;
+}
+
+.lpm-twice__total strong {
+  font-size: 30px;
+  font-weight: 600;
+  color: var(--lpm-rose-deep);
+}
+
+.lpm-twice__save {
+  margin-top: 14px;
+  padding: 10px 12px;
+  border-radius: 9999px;
+  background-color: var(--lpm-rose-deep);
+  color: #FFFFFF;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.lpm-twice__save strong {
+  margin: 0 4px;
+  font-family: var(--lpm-font-serif);
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.lpm-twice__copy {
+  margin-top: 16px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.8;
+  text-align: center;
+}
+
+.lpm-twice .lpm-note {
+  margin-top: 12px;
 }
 
 .lpm-conditions {
