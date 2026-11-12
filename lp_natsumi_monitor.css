@@ -944,18 +944,64 @@
 }
 
 .lpm-artist__instagram {
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  gap: 8px;
-  margin-top: 18px;
-  font-size: 13px;
-  color: var(--lpm-rose-deep);
-  text-decoration: underline;
-  text-underline-offset: 3px;
+  gap: 14px;
+  margin-top: 24px;
+  padding: 12px 20px 12px 14px;
+  background-color: #FFFFFF;
+  border: 1.5px solid var(--lpm-rose);
+  border-radius: 9999px;
+  color: var(--lpm-ink);
+  text-align: left;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(154, 107, 94, 0.16);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.lpm-artist__instagram i {
-  font-size: 20px;
+.lpm-artist__instagram:hover {
+  opacity: 1;
+  color: var(--lpm-ink);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(154, 107, 94, 0.24);
+}
+
+.lpm-artist__instagram-icon {
+  flex: 0 0 46px;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 107%, #FDF497 0%, #FDF497 5%, #FD5949 45%, #D6249F 60%, #285AEB 90%);
+  color: #FFFFFF;
+  font-size: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lpm-artist__instagram-text {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.4;
+}
+
+.lpm-artist__instagram-text strong {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.lpm-artist__instagram-text small {
+  margin-top: 2px;
+  font-size: 12px;
+  letter-spacing: 0.02em;
+  color: var(--lpm-ink-soft);
+}
+
+.lpm-artist__instagram-arrow {
+  font-size: 13px;
+  color: var(--lpm-rose);
 }
 
 /* ---------- デザイン（技法） ---------- */
